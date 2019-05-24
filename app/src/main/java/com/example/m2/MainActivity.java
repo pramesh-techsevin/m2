@@ -60,8 +60,15 @@ public class MainActivity extends AppCompatActivity {
         // Drawable data = productimgImageView.getDrawable();
 
 
-        productimgImageView.setOnTouchListener(mTouchListener);
+       // productimgImageView.setOnTouchListener(mTouchListener);
 
+        productimgImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ImageDisplay.class);
+                startActivity(intent);
+            }
+        });
 
         addtocartButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,6 +117,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     private View.OnTouchListener mTouchListener = new View.OnTouchListener() {
 
 
@@ -121,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
             builder.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
+
+
+
             builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
                 @Override
                 public void onDismiss(DialogInterface dialogInterface) {
@@ -129,15 +153,19 @@ public class MainActivity extends AppCompatActivity {
             });
 
 
+
+
+
             builder.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                     WindowManager.LayoutParams.MATCH_PARENT);
 
 
-            builder.setContentView(R.layout.fullscreen_image_layout);
+//            builder.setContentView(R.layout.fullscreen_image_layout);
+            builder.setContentView(R.layout.activity_image_display);
 
-            /*ImageView imgView = builder.findViewById(R.id.imgV);
-            imgView.setImageResource(R.drawable.product1);*/
-
+            *//*ImageView imgView = builder.findViewById(R.id.imgV);
+            imgView.setImageResource(R.drawable.product1);
+*//*
             fullScrCloseButton = builder.findViewById(R.id.fullscrclosebtn);
 
 
@@ -153,15 +181,15 @@ public class MainActivity extends AppCompatActivity {
             });
 
 
-            ViewPager viewPager = builder.findViewById(R.id.viewpager);
-
-            TabLayout tablayout =  builder.findViewById(R.id.tablayout);
 
 
+
+           *//* ViewPager viewPager =  builder.findViewById(R.id.pager);
             MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
-
             viewPager.setAdapter(myPagerAdapter);
-            tablayout.setupWithViewPager(viewPager);
+*//*
+
+
 
             builder.show();
             return false;
@@ -170,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-    };
+    };*/
 
 
 }
